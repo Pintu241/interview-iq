@@ -3,7 +3,7 @@ services:
     name: interviewiq-backend
     env: node
     plan: free
-    rootDir: server
+    rootDir: 3.interviewIQ/server
     buildCommand: npm install
     startCommand: node index.js
     envVars:
@@ -19,7 +19,7 @@ services:
     name: interviewiq-frontend
     env: static
     plan: free
-    rootDir: client
+    rootDir: 3.interviewIQ/client
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
