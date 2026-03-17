@@ -108,7 +108,7 @@ function Pricing() {
 
 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-emerald-50 py-16 px-6'>
+    <div className='min-h-screen bg-gradient-dynamic py-16 px-6'>
 
       <div className='max-w-6xl mx-auto mb-14 flex items-start gap-4'>
 
@@ -139,8 +139,8 @@ function Pricing() {
 
               className={`relative rounded-3xl p-8 transition-all duration-300 border 
                 ${isSelected
-                  ? "border-emerald-600 shadow-2xl bg-white"
-                  : "border-gray-200 bg-white shadow-md"
+                  ? "border-emerald-500 shadow-2xl bg-white/90 backdrop-blur-xl scale-[1.02]"
+                  : "border-gray-200/50 glass-card shadow-lg hover:shadow-xl"
                 }
                 ${plan.default ? "cursor-default" : "cursor-pointer"}
               `}

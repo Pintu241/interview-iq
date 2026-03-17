@@ -29,7 +29,7 @@ function Home() {
   const [showAuth, setShowAuth] = useState(false);
   const navigate = useNavigate()
   return (
-    <div className='min-h-screen bg-[#f3f3f3] flex flex-col'>
+    <div className='min-h-screen bg-gradient-dynamic flex flex-col'>
       <Navbar />
 
       <div className='flex-1 px-6 py-20'>
@@ -266,7 +266,7 @@ function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ y: -6 }}
-                    className="bg-white border border-gray-200 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all">
+                    className="glass-card border border-white/40 rounded-3xl p-8 shadow-md hover:shadow-xl transition-all">
 
                     <div className='flex items-center justify-between gap-6'>
                       <div className="w-1/2">

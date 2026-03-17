@@ -37,12 +37,19 @@ function Navbar() {
         animate={{opacity:1 , y:0}}
         transition={{duration: 0.3}}
         className='w-full max-w-6xl bg-white rounded-[24px] shadow-sm border border-gray-200 px-8 py-4 flex justify-between items-center relative'>
-            <div className='flex items-center gap-3 cursor-pointer'>
+            <div className='flex items-center gap-3 cursor-pointer' onClick={() => navigate('/')}>
                 <div className='bg-black text-white p-2 rounded-lg'>
                     <BsRobot size={18}/>
 
                 </div>
                 <h1 className='font-semibold hidden md:block text-lg'>InterviewIQ</h1>
+            </div>
+
+            <div className='hidden lg:flex items-center gap-8 font-medium text-gray-600'>
+                <button onClick={() => navigate('/')} className='hover:text-black transition'>Home</button>
+                <button onClick={() => { if(!userData) { setShowAuth(true); return; } navigate('/interview') }} className='hover:text-black transition'>Interview</button>
+                <button onClick={() => { if(!userData) { setShowAuth(true); return; } navigate('/history') }} className='hover:text-black transition'>History</button>
+                <button onClick={() => navigate('/pricing')} className='hover:text-black transition'>Pricing</button>
             </div>
 
             <div className='flex items-center gap-6  relative'>
