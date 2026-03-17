@@ -9,8 +9,10 @@ import axios from 'axios';
 import { ServerUrl } from '../App';
 import { useDispatch } from 'react-redux';
 import { setUserData } from '../redux/userSlice';
+import { useNavigate } from 'react-router-dom';
 function Auth({isModel = false}) {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const handleGoogleAuth = async () => {
         try {
@@ -21,8 +23,7 @@ function Auth({isModel = false}) {
             const result = await axios.post(ServerUrl + "/api/auth/google" , {name , email} , {withCredentials:true})
             dispatch(setUserData(result.data))
             
-
-
+            navigate('/'); // Go back to the dashboard/home
             
         } catch (error) {
             console.log(error)
